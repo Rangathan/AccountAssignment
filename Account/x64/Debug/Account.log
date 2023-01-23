@@ -1,0 +1,3 @@
+﻿  accountTest.cpp
+C:\Users\adam\Documents\Programming Project\C++ assignments\AccountAssignment\balance.h(59,63): warning C4244: 'argument': conversion from 'long double' to 'int64_t', possible loss of data
+  Account.vcxproj -> C:\Users\adam\Documents\Programming Project\C++ assignments\AccountAssignment\x64\Debug\Account.exe
