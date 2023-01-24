@@ -52,13 +52,14 @@ public:
 	/* add interest using int rate. It means for example for rate of
 	* 2.345 % we should call addInterest(2345, 1000), and for 2.45 % we call addInterest(245, 100)
 	*/
-	void addInterest(long double rate, int divisor)
+	DollarAmount addInterest(long double rate, int divisor)
 	{
 		//added round it
-		// Had to change the formaula as it would give the interest in thousands not the proper 
+		int percentDivisor  = divisor * 100; 
 		// first compute the interest. Then add the interest to mount
-		DollarAmount interest(round((amount * rate + divisor / 2) / (divisor * 100)));
+		DollarAmount interest(round((amount * rate + divisor / 2) / percentDivisor));
 		add(interest);  // amount = amount + interest.amount
+		return interest;
 	}
 
 private:
