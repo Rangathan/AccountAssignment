@@ -35,7 +35,7 @@ int main()
 				// Then print Jane saving account using toString() method in Account class
 	cout << "Jane's Saving account after Monthly Interest is added: " << janeSavingAccount.toString();
 		// 1- For Ali's checking account: call CompoundInterestDaily. yearly Interest rate 2.45%, for 10 years, 
-	aliChequingAccount.CompoundInterestDaily(245, 100, 3650);
+	aliChequingAccount.CompoundInterestDaily(245, 10000, 3650);
 				// Then print Ali account using toString() method in Account class
 	cout << "Ali's Chequing account after Daily interest is added: " << aliChequingAccount.toString();
 
