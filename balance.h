@@ -57,7 +57,7 @@ public:
 		//added round it
 		int percentDivisor  = divisor * 100; 
 		// first compute the interest. Then add the interest to mount
-		DollarAmount interest(round((amount * rate + divisor / 2) / percentDivisor));
+		DollarAmount interest(ceil((amount * rate + divisor / 2) / percentDivisor));
 		add(interest);  // amount = amount + interest.amount
 		return interest;
 	}
