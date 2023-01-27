@@ -124,7 +124,7 @@ public:
 		// Each day interest is added to the balance, so it can
 		// be used for computing subsequent day interest.
 		// problem with this, is that the data type used in the balance.h does not go large enough so there is a loss of data that affect the calculation.
-		long double dailyrate = yearlyrate / 365;
+		long double dailyrate = ceil(yearlyrate*10) / 365)/10;
 		for (int i = 1; i <= days; ++i)
 			balance.addInterest(dailyrate, base);
 		return DollarAmount{};
